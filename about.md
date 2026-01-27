@@ -2,6 +2,8 @@
 title: "About Me"
 ---
 
+
+
 ## Background
 
 Write a brief introduction about yourself here. Include:
@@ -11,9 +13,11 @@ Write a brief introduction about yourself here. Include:
 - Your career goals
 - Any relevant experience or projects
 
+
+
 ## Education
 
-- **[Your Degree]** - [University Name], [Year]
+- **Statistics** - Brigham Young University, April 2027
 - **Relevant Coursework**: Statistics, Data Analysis, Programming, etc.
 
 ## Skills & Interests
