@@ -62,42 +62,42 @@
     "href": "about.html",
     "title": "About Me",
     "section": "",
-    "text": "Write a brief introduction about yourself here. Include:\n\nYour academic background\nYour interest in data science\nYour career goals\nAny relevant experience or projects"
+    "text": "My name is Sujin Leek, and I am a junior studying statistics at Brigham Young University. I really enjoy math and its applications to science and real-world problems, which is how I got into data science. I hope to make a positive impact on the world through my career; I would like to work in research, but am open to diverse opportunities.\nI have internship experience at a national laboratory, where I did statistical work (black-box optimization) for an equation of state project. I am currently working as a research assistant in the statistics department at BYU. Please feel free to contact me with any questions!"
   },
   {
     "objectID": "about.html#background",
     "href": "about.html#background",
     "title": "About Me",
     "section": "",
-    "text": "Write a brief introduction about yourself here. Include:\n\nYour academic background\nYour interest in data science\nYour career goals\nAny relevant experience or projects"
+    "text": "My name is Sujin Leek, and I am a junior studying statistics at Brigham Young University. I really enjoy math and its applications to science and real-world problems, which is how I got into data science. I hope to make a positive impact on the world through my career; I would like to work in research, but am open to diverse opportunities.\nI have internship experience at a national laboratory, where I did statistical work (black-box optimization) for an equation of state project. I am currently working as a research assistant in the statistics department at BYU. Please feel free to contact me with any questions!"
   },
   {
     "objectID": "about.html#education",
     "href": "about.html#education",
     "title": "About Me",
     "section": "Education",
-    "text": "Education\n\nStatistics - Brigham Young University, April 2027\nRelevant Coursework: Statistics, Data Analysis, Programming, etc."
+    "text": "Education\n\nStatistics: Emphasis Statistical Science, Minor Mathematics - Brigham Young University, April 2027\nRelevant Coursework: Introduction to Computer Science (Python), Applied R Programming, Probability and Inference I, II, Statistical Modeling I, II (ANOVA, Regression), Linear Algebra (with computational applications in Python), Calculus I, II, III, Data Science Process, Bayesian Statistics"
   },
   {
     "objectID": "about.html#skills-interests",
     "href": "about.html#skills-interests",
     "title": "About Me",
     "section": "Skills & Interests",
-    "text": "Skills & Interests\n\nTechnical Skills\n\nProgramming: Python\nData Analysis: Pandas, NumPy\nVisualization: Matplotlib, Seaborn\nMachine Learning: Scikit-learn\nTools: Jupyter Notebooks, Git/GitHub\n\n\n\nAreas of Interest\n\n[Your specific interests, e.g., environmental data, healthcare analytics, finance, etc.]\n[Other areas you’re curious about]"
+    "text": "Skills & Interests\n\nI have experience with Python and R - R for data analysis, and Python for scripting. I have not used Python for data analysis thus far, but am excited to work with Pandas and Numpy in my current courses.\nI grew up speaking Korean as a second language.\nOn my mission, I found out that I like teaching! I taught lots of English and Korean while I was serving in South Korea and was able to work as a teaching assistant when I returned to BYU.\nI love reading! I particularly enjoy books on science and public health, but like fiction as well. My favorite books that I’ve read recently are Empire of AI by Karen Hao and Blind Spots by Marty Makary.\n\n\nTechnical Skills\n\nProgramming: Python, R\nData Analysis: Pandas, NumPy, Tidyverse\nVisualization: Matplotlib, ggplot\nTools: Jupyter Notebooks, Git/GitHub\n\n\n\nAreas of Interest\nI am interested in all areas of science and love math, which is why I ended up in statistics. I enjoy learning new ways to work with data using computers. I did begin university in a public health major, so I am especially interested in epidemiology and statistical applications in biology, as well as social problems."
   },
   {
     "objectID": "about.html#goals",
     "href": "about.html#goals",
     "title": "About Me",
     "section": "Goals",
-    "text": "Goals\nDescribe what you hope to achieve through your data science journey:\n\nShort-term learning objectives\nLong-term career aspirations\nTypes of problems you want to solve"
+    "text": "Goals\nRight now, my focus is on becoming proficient in theory and tools such that I can answer questions I or others have about the world. I would like to continue doing research and learning new things for the rest of my life, and ideally, my chosen career path will allow me to have a positive impact on the world.\nAs I mentioned earlier, I enjoy learning about epidemiology and reading about social problems. Questions like “how can we leverage AI to help solve social problems?” and “are current methods of disease prevention statistically sound and realistically workable?” really appeal to me. I do, however, really enjoy math and proofs, so learning new methods in pure statistics is appealing to me as well."
   },
   {
     "objectID": "about.html#contact",
     "href": "about.html#contact",
     "title": "About Me",
     "section": "Contact",
-    "text": "Contact\n\nEmail: your.email@example.com\nGitHub: github.com/your-username\nLinkedIn: linkedin.com/in/your-profile\n\n\nThis portfolio showcases my learning progress and projects completed during my data science studies."
+    "text": "Contact\n\nEmail: smleek04@gmail.com\nGitHub: github.com/smleek\nLinkedIn: linkedin.com/in/sujinleek\n\n\nThis portfolio showcases my learning progress and projects completed during my data science studies."
   },
   {
     "objectID": "projects/data-acquisition.html",
