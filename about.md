@@ -10,7 +10,7 @@ My name is Sujin Leek, and I am a junior studying statistics at Brigham Young Un
 
 I have internship experience at Lawrence Livermore National Laboratory, where I did statistical work (black-box optimization) for an equation of state project. I am currently working as a research assistant in the statistics department at BYU and will complete an internship at Oak Ridge National Laboratory this summer. . Please feel free to contact me with any questions! 
 
-![This is me!]/home/sujin/Pictures/profile.jpeg
+![This is me!]/my_github_page/images/profile.jpeg
 
 
 ## Education
