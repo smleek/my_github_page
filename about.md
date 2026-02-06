@@ -8,7 +8,9 @@ title: "About Me"
 
 My name is Sujin Leek, and I am a junior studying statistics at Brigham Young University. I really enjoy math and its applications to science and real-world problems, which is how I got into data science. I hope to make a positive impact on the world through my career; I would like to work in research, but am open to diverse opportunities. 
 
-I have internship experience at a national laboratory, where I did statistical work (black-box optimization) for an equation of state project. I am currently working as a research assistant in the statistics department at BYU. Please feel free to contact me with any questions! 
+I have internship experience at Lawrence Livermore National Laboratory, where I did statistical work (black-box optimization) for an equation of state project. I am currently working as a research assistant in the statistics department at BYU and will complete an internship at Oak Ridge National Laboratory this summer. . Please feel free to contact me with any questions! 
+
+![This is me!]/home/sujin/Pictures/profile.jpeg
 
 
 ## Education
