@@ -39,6 +39,7 @@ website:
         - projects/eda.qmd
         - projects/data-acquisition.qmd
         - projects/final-project.qmd
+        - projects/tutorial.md
 
 format:
   html:
