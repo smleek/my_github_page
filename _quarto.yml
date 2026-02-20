@@ -30,6 +30,10 @@ website:
             href: docs/projects/tutorial.html
           - text: "Tutorial: Random Forest for Classification"
             href: projects/tutorial.md
+          - text: "Tutorial: Random Forest"
+            href: projects/tutorial.qmd
+          - text: "Tutorial: Random Forest"
+            href: docs/projects/tutorial.qmd
     right:
       - icon: github
         href: https://github.com/smleek
@@ -45,6 +49,7 @@ website:
         - projects/final-project.qmd
         - projects/tutorial.md
         - projects/tutorial.html
+        - projects/tutorial.qmd
 
 format:
   html:
