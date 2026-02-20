@@ -33,7 +33,7 @@ diabetes = diabetes.drop(columns = ['row'])
 
 At this point, `diabetes` should output this: 
 
-![diabetes dataset printout](/home/sujin/stat386/my_github_page/images/cleaned_diabetes.png)
+![diabetes dataset printout](../images/cleaned_diabetes.png)
 
 ### More setup...
 
@@ -75,7 +75,7 @@ random_forest.fit(pred_train, response_train)
 
 This should output the below image, which summarizes parameters from the model. 
 
-!['random forest classifier'](/home/sujin/stat386/my_github_page/images/random_forest_classifier.png)
+!['random forest classifier'](../images/random_forest_classifier.png)
 
 ### Making predictions
 
@@ -90,7 +90,7 @@ predictions
 
 If you set your `random_state = 1`, then the results should look identical to mine. If not, they're probably pretty similar. 
 
-![model evaluation](/home/sujin/stat386/my_github_page/images/evaluation.png)
+![model evaluation](../images/evaluation.png)
 
 Accuracy is around 75%, which is certainly better than 50%, which is the baseline for deciding whether a classification model is good or not. Interestingly, the model I fit last semester using logistic regression was substantially better with an accuracy of 80.6%.
 
