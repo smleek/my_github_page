@@ -2,7 +2,7 @@
 title: "Welcome to My Data Science Portfolio"
 ---
 
-# Hello! I'm [Your Name] 👋
+# Hello! I'm Sujin Leek! 
 
 Welcome to my data science portfolio! This site shows my journey learning data science and analytics. Here you'll find projects that demonstrate what I've learned and discovered.
 
@@ -39,6 +39,11 @@ See how I gather data from different sources and prepare it for analysis.
 
 ::: {.g-col-6}
 ### [Final Project](projects/final-project.qmd)
+See how I tackle a data science project beginning to end.
+:::
+
+::: {.g-col-6}
+### [Tutorial](projects/tutorial.qmd)
 See how I tackle a data science project beginning to end.
 :::
 
