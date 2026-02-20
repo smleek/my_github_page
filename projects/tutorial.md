@@ -31,7 +31,7 @@ diabetes = pd.read_csv("/path/to/Diabetes.txt", sep = r"\s+")
 diabetes = diabetes.drop(columns = ['row'])
 ```
 
-At this point, diabetes should output this: 
+At this point, `diabetes` should output this: 
 
 ![diabetes dataset printout](/home/sujin/stat386/my_github_page/images/cleaned_diabetes.png)
 
@@ -56,9 +56,7 @@ pred_train, pred_test, response_train, response_test = train_test_split(predicto
 
 ### Brief Interlude for Explanation 
 
-Random forest is named that way because it builds a bunch of decision trees. 
-
-One tree is trained on a single bootstrap sample (random, with-replacement sample), meaning it can be thought of as a mini-model that is overfitted and has high variance. 
+Random forest is named that way because it builds a bunch of decision trees. One tree is trained on a single bootstrap sample (random, with-replacement sample), meaning it can be thought of as a mini-model that is overfitted and has high variance. 
 
 Each tree splits data into regions based on feature thresholds. At each split, the tree only considers a random subset of predictors, which reduces correlation between trees. 
 
