@@ -24,7 +24,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 ```
 
-The diabetes dataset is provided ... somehow. The dataset is already pretty tidy, but I decided to drop the `"row"` column as I found it redundant. There isn't any real cleaning to do. 
+The diabetes dataset is provided at the bottom of this page. The dataset is already pretty tidy, but I decided to drop the `"row"` column as I found it redundant. There isn't any real cleaning to do. 
 
 ```
 diabetes = pd.read_csv("/path/to/Diabetes.txt", sep = r"\s+")
@@ -33,7 +33,7 @@ diabetes = diabetes.drop(columns = ['row'])
 
 At this point, `diabetes` should output this: 
 
-![diabetes dataset printout](../images/cleaned_diabetes.png)
+![diabetes dataset printout](images/cleaned_diabetes.png)
 
 ### More setup...
 
@@ -75,7 +75,7 @@ random_forest.fit(pred_train, response_train)
 
 This should output the below image, which summarizes parameters from the model. 
 
-!['random forest classifier'](../images/random_forest_classifier.png)
+!['random forest classifier'](images/random_forest_classifier.png)
 
 ### Making predictions
 
@@ -90,13 +90,17 @@ predictions
 
 If you set your `random_state = 1`, then the results should look identical to mine. If not, they're probably pretty similar. 
 
-![model evaluation](../images/evaluation.png)
+![model evaluation](images/evaluation.png)
 
 Accuracy is around 75%, which is certainly better than 50%, which is the baseline for deciding whether a classification model is good or not. Interestingly, the model I fit last semester using logistic regression was substantially better with an accuracy of 80.6%.
 
 ## Conclusion 
 
 So, it turns out I picked not the greatest dataset to show off random forest with, since logistic regression seems to have done better than random forest. However, we know that random forest is more robust to overfitting (so, it's possible that the random forest model is secretly better), and we can now try this new method on other datasets. It's also important to note that random forest can classify into more than two bins. Try out random forest on a dataset you're curious about! 
+
+## As Promised: Diabetes Dataset
+
+[Diabetes.txt](/Diabetes.txt)
 
 ---
 

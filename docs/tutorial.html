@@ -206,6 +206,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#evaluation" id="toc-evaluation" class="nav-link" data-scroll-target="#evaluation">Evaluation</a></li>
   </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#as-promised-diabetes-dataset" id="toc-as-promised-diabetes-dataset" class="nav-link" data-scroll-target="#as-promised-diabetes-dataset">As Promised: Diabetes Dataset</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -249,13 +250,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report</code></pre>
-<p>The diabetes dataset is provided … somehow. The dataset is already pretty tidy, but I decided to drop the <code>"row"</code> column as I found it redundant. There isn’t any real cleaning to do.</p>
+<p>The diabetes dataset is provided at the bottom of this page. The dataset is already pretty tidy, but I decided to drop the <code>"row"</code> column as I found it redundant. There isn’t any real cleaning to do.</p>
 <pre><code>diabetes = pd.read_csv("/path/to/Diabetes.txt", sep = r"\s+")
 diabetes = diabetes.drop(columns = ['row'])</code></pre>
 <p>At this point, <code>diabetes</code> should output this:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/cleaned_diabetes.png" class="img-fluid figure-img"></p>
+<p><img src="images/cleaned_diabetes.png" class="img-fluid figure-img"></p>
 <figcaption>diabetes dataset printout</figcaption>
 </figure>
 </div>
@@ -285,7 +286,7 @@ random_forest.fit(pred_train, response_train)</code></pre>
 <p>This should output the below image, which summarizes parameters from the model.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/random_forest_classifier.png" class="img-fluid figure-img"></p>
+<p><img src="images/random_forest_classifier.png" class="img-fluid figure-img"></p>
 <figcaption>‘random forest classifier’</figcaption>
 </figure>
 </div>
@@ -301,7 +302,7 @@ predictions</code></pre>
 <p>If you set your <code>random_state = 1</code>, then the results should look identical to mine. If not, they’re probably pretty similar.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/evaluation.png" class="img-fluid figure-img"></p>
+<p><img src="images/evaluation.png" class="img-fluid figure-img"></p>
 <figcaption>model evaluation</figcaption>
 </figure>
 </div>
@@ -311,6 +312,10 @@ predictions</code></pre>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>So, it turns out I picked not the greatest dataset to show off random forest with, since logistic regression seems to have done better than random forest. However, we know that random forest is more robust to overfitting (so, it’s possible that the random forest model is secretly better), and we can now try this new method on other datasets. It’s also important to note that random forest can classify into more than two bins. Try out random forest on a dataset you’re curious about!</p>
+</section>
+<section id="as-promised-diabetes-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="as-promised-diabetes-dataset">As Promised: Diabetes Dataset</h2>
+<p><a href="./Diabetes.txt">Diabetes.txt</a></p>
 <hr>
 <p><em>This tutorial was created as an assignment for STAT 386.</em></p>
 
@@ -798,7 +803,7 @@ predictions</code></pre>
 <span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="in">from sklearn.metrics import accuracy_score, classification_report</span></span>
 <span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>The diabetes dataset is provided ... somehow. The dataset is already pretty tidy, but I decided to drop the <span class="in">`"row"`</span> column as I found it redundant. There isn't any real cleaning to do. </span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>The diabetes dataset is provided at the bottom of this page. The dataset is already pretty tidy, but I decided to drop the <span class="in">`"row"`</span> column as I found it redundant. There isn't any real cleaning to do. </span>
 <span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a><span class="in">diabetes = pd.read_csv("/path/to/Diabetes.txt", sep = r"\s+")</span></span>
@@ -807,7 +812,7 @@ predictions</code></pre>
 <span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>At this point, <span class="in">`diabetes`</span> should output this: </span>
 <span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a><span class="al">![diabetes dataset printout](../images/cleaned_diabetes.png)</span></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a><span class="al">![diabetes dataset printout](images/cleaned_diabetes.png)</span></span>
 <span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a><span class="fu">### More setup...</span></span>
 <span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a></span>
@@ -849,7 +854,7 @@ predictions</code></pre>
 <span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a>This should output the below image, which summarizes parameters from the model. </span>
 <span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a><span class="al">!['random forest classifier'](../images/random_forest_classifier.png)</span></span>
+<span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a><span class="al">!['random forest classifier'](images/random_forest_classifier.png)</span></span>
 <span id="cb7-79"><a href="#cb7-79" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-80"><a href="#cb7-80" aria-hidden="true" tabindex="-1"></a><span class="fu">### Making predictions</span></span>
 <span id="cb7-81"><a href="#cb7-81" aria-hidden="true" tabindex="-1"></a></span>
@@ -864,7 +869,7 @@ predictions</code></pre>
 <span id="cb7-90"><a href="#cb7-90" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-91"><a href="#cb7-91" aria-hidden="true" tabindex="-1"></a>If you set your <span class="in">`random_state = 1`</span>, then the results should look identical to mine. If not, they're probably pretty similar. </span>
 <span id="cb7-92"><a href="#cb7-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-93"><a href="#cb7-93" aria-hidden="true" tabindex="-1"></a><span class="al">![model evaluation](../images/evaluation.png)</span></span>
+<span id="cb7-93"><a href="#cb7-93" aria-hidden="true" tabindex="-1"></a><span class="al">![model evaluation](images/evaluation.png)</span></span>
 <span id="cb7-94"><a href="#cb7-94" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-95"><a href="#cb7-95" aria-hidden="true" tabindex="-1"></a>Accuracy is around 75%, which is certainly better than 50%, which is the baseline for deciding whether a classification model is good or not. Interestingly, the model I fit last semester using logistic regression was substantially better with an accuracy of 80.6%.</span>
 <span id="cb7-96"><a href="#cb7-96" aria-hidden="true" tabindex="-1"></a></span>
@@ -872,9 +877,13 @@ predictions</code></pre>
 <span id="cb7-98"><a href="#cb7-98" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-99"><a href="#cb7-99" aria-hidden="true" tabindex="-1"></a>So, it turns out I picked not the greatest dataset to show off random forest with, since logistic regression seems to have done better than random forest. However, we know that random forest is more robust to overfitting (so, it's possible that the random forest model is secretly better), and we can now try this new method on other datasets. It's also important to note that random forest can classify into more than two bins. Try out random forest on a dataset you're curious about! </span>
 <span id="cb7-100"><a href="#cb7-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-101"><a href="#cb7-101" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb7-101"><a href="#cb7-101" aria-hidden="true" tabindex="-1"></a><span class="fu">## As Promised: Diabetes Dataset</span></span>
 <span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-103"><a href="#cb7-103" aria-hidden="true" tabindex="-1"></a>*This tutorial was created as an assignment for STAT 386.*</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb7-103"><a href="#cb7-103" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Diabetes.txt</span><span class="co">](/Diabetes.txt)</span></span>
+<span id="cb7-104"><a href="#cb7-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-105"><a href="#cb7-105" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb7-106"><a href="#cb7-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-107"><a href="#cb7-107" aria-hidden="true" tabindex="-1"></a>*This tutorial was created as an assignment for STAT 386.*</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
