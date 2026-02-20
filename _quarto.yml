@@ -24,6 +24,8 @@ website:
             href: projects/data-acquisition.qmd
           - text: "Final Project"
             href: projects/final-project.qmd
+          - text: "Tutorial: Random Forest for Classification"
+            href: projects/tutorial.md
     right:
       - icon: github
         href: https://github.com/smleek
