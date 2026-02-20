@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Your Name - Data Science Portfolio"
+  title: "Sujin Leek - Data Science Portfolio"
   description: "A showcase of my data science projects and learning journey"
   
   navbar:
@@ -24,16 +24,10 @@ website:
             href: projects/data-acquisition.qmd
           - text: "Final Project"
             href: projects/final-project.qmd
-          - text: "Tutorial: Random Forest for Classification"
-            href: projects/tutorial.html
-          - text: "Tutorial: Random Forest for Classification"
-            href: docs/projects/tutorial.html
-          - text: "Tutorial: Random Forest for Classification"
-            href: projects/tutorial.md
           - text: "Tutorial: Random Forest"
             href: projects/tutorial.qmd
-          - text: "Tutorial: Random Forest"
-            href: docs/projects/tutorial.qmd
+      - text: "Tutorials"
+        href: tutorial.md
     right:
       - icon: github
         href: https://github.com/smleek
@@ -47,8 +41,6 @@ website:
         - projects/eda.qmd
         - projects/data-acquisition.qmd
         - projects/final-project.qmd
-        - projects/tutorial.md
-        - projects/tutorial.html
         - projects/tutorial.qmd
 
 format:
