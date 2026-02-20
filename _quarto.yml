@@ -44,6 +44,7 @@ website:
         - projects/data-acquisition.qmd
         - projects/final-project.qmd
         - projects/tutorial.md
+        - projects/tutorial.html
 
 format:
   html:
