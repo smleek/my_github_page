@@ -15,7 +15,7 @@ We will be using it here to classify patients as having diabetes or not. I was g
 
 ### Imports, setup, cleaning...
 
-Starting with imports: Since I'm most familiar with `pandas`, that's what I'll be using for this tutorial. We also need to import the `scikit-learn` package, which is a very popular Python package for data science. 
+Starting with imports: Since I'm most familiar with `pandas` (a popular data science package similar to R tidyverse functions), that's what I'll be using for this tutorial. We also need to import the `scikit-learn` package, which is generally considered the most popular data science package. 
 
 ```
 import pandas as pd
@@ -44,11 +44,11 @@ predictors = diabetes.drop(columns=['diabetes'])
 response = diabetes['diabetes']
 ```
 
-Good practice in machine learning is to split up data before training and evaluating a model for later model validation. `Scikit-learn` makes this really easy. 
+Good practice in machine learning is to split up data before training and evaluating a model for later model validation. `scikit-learn` makes this really easy. 
 
-Here, I've chosen the variable names `pred_train`, `pred_test`, `response_train`, and `response_test` for the output of the `train_test_split` function. The function returns what I've described with the variable names: training predictor variables, testing predictor variables, training response variables, and testing response variables. 
+Here, I've chosen the variable names `pred_train`, `pred_test`, `response_train`, and `response_test` for the output of the `train_test_split` function. The function returns what I've described with the variable names: training predictor variables, testing predictor variables, training response variables, and testing response variables.
 
-I've chosen a test size of 0.2 for an 80-20 split, which is pretty standard. `random_state` is the same thing as `set.seed()`. 
+I've chosen a test size of 0.2 for an 80-20 split, which is pretty standard. `random_state` is the same thing as `set.seed()`; both functions tell your computer where to start its random-but-not-random process. 
 
 ```
 pred_train, pred_test, response_train, response_test = train_test_split(predictors, response, test_size=0.2, random_state=1)
@@ -58,9 +58,9 @@ pred_train, pred_test, response_train, response_test = train_test_split(predicto
 
 Random forest is named that way because it builds a bunch of decision trees. One tree is trained on a single bootstrap sample (random, with-replacement sample), meaning it can be thought of as a mini-model that is overfitted and has high variance. 
 
-Each tree splits data into regions based on feature thresholds. At each split, the tree only considers a random subset of predictors, which reduces correlation between trees. 
+Each tree splits data into regions based on feature thresholds, and splits at the point that reduces Gini impurity the best. Gini impurity calculates the probability of a randomly chosen element being incorrectly labeled if it was randomly labeled according to the sample used by the tree, with a range from 0 to 0.5, 0 being ideal. 
 
-For the diabetes example, a single tree might say that an individual who has been pregnant 5 times and has a glucose level about 150 is positive for type 2 diabetes, but ignore the patient's BMI. 
+At each split, the tree only considers a random subset of predictors, which reduces correlation between trees. For the diabetes example, a single tree might say that an individual who has been pregnant 5 times and has a glucose level about 150 is positive for type 2 diabetes, but ignore the patient's BMI. 
 
 Each tree is considered to create the overall model. In the case of classification, a majority vote is used. When we test the model, every tree (in this case, 100) will evaluate the predictor variables and output a 1 or a 0. The majority vote wins, classifying a patient as either having diabetes or not. 
 
@@ -93,6 +93,13 @@ If you set your `random_state = 1`, then the results should look identical to mi
 ![model evaluation](images/evaluation.png)
 
 Accuracy is around 75%, which is certainly better than 50%, which is the baseline for deciding whether a classification model is good or not. Interestingly, the model I fit last semester using logistic regression was substantially better with an accuracy of 80.6%.
+
+While this isn't as important, a feature I really like is `feature_importances_`, which tells us how helpful each predictor variable was. 
+
+```
+random_forest.feature_importances_
+```
+This returns `array([0.086472, 0.26873562, 0.07624572, 0.07654465, 0.13097512, 0.12343495, 0.10309287, 0.13449908])`, which (we need to look at our original data for this) tells us that `glucose` at `0.269` was the most helpful predictor variable, and `diastolic` at `0.0762` was the least helpful predictor variable. 
 
 ## Conclusion 
 
