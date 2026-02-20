@@ -12,3 +12,5 @@ title: "Projects Overview"
 
 ### [Final Project](final-project.qmd)
 **Description**: A comprehensive project that shows off my data science skills.
+
+### [Tutorial Post](tutorial.qmd)
