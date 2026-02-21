@@ -64,6 +64,10 @@ At each split, the tree only considers a random subset of predictors, which redu
 
 Each tree is considered to create the overall model. In the case of classification, a majority vote is used. When we test the model, every tree (in this case, 100) will evaluate the predictor variables and output a 1 or a 0. The majority vote wins, classifying a patient as either having diabetes or not. 
 
+Here's a nice diagram provided by Deniz Gunay via Medium that summarizes the concept well: 
+
+!['random forest diagram'](images/rf_diagram.png)
+
 ### Fitting the model
 
 Now it's time to fit our model! `n_estimators` refers to the number of trees in the forest, and we've again set `random_state = 1`. Note that we train (fit) the model on the previously allocated 80% of the data. 
@@ -103,9 +107,11 @@ This returns `array([0.086472, 0.26873562, 0.07624572, 0.07654465, 0.13097512, 0
 
 ## Conclusion 
 
-So, it turns out I picked not the greatest dataset to show off random forest with, since logistic regression seems to have done better than random forest. However, we know that random forest is more robust to overfitting (so, it's possible that the random forest model is secretly better), and we can now try this new method on other datasets. It's also important to note that random forest can classify into more than two bins. Try out random forest on a dataset you're curious about! 
+So, it turns out I picked not the greatest dataset to show off random forest with, since logistic regression seems to have done better than random forest. However, we know that random forest is more robust to overfitting (so, it's possible that the random forest model is secretly better), and we can now try this new method on other datasets. It's also important to note that random forest can classify into more than two bins. 
 
-## As Promised: Diabetes Dataset
+Try out random forest on a dataset you're curious about! Obviously, doing the same analysis I just did would be helpful; you could even try adding more trees or other modifications to see if the results are better.
+
+### As Promised: Diabetes Dataset
 
 [Diabetes.txt](/Diabetes.txt)
 
