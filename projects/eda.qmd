@@ -1,6 +1,6 @@
 ---
 title: "EDA Project"
-author: "Your Name"
+author: "Sujin Leek"
 date: "2025-01-01"
 format:
   html:

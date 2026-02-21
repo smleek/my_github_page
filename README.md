@@ -17,7 +17,7 @@ This repository provides a simple template for creating a personal data science 
    - Make sure it's **Public**
 
 2. **Customize your site**
-   - Replace "Your Name" with your actual name in all files
+   - Replace "Sujin Leek" with your actual name in all files
    - Update your GitHub and LinkedIn links in `_quarto.yml` if you want them.
    - Edit the About Me page with your information
 
