@@ -64,7 +64,7 @@ At each split, the tree only considers a random subset of predictors, which redu
 
 Each tree is considered to create the overall model. In the case of classification, a majority vote is used. When we test the model, every tree (in this case, 100) will evaluate the predictor variables and output a 1 or a 0. The majority vote wins, classifying a patient as either having diabetes or not. 
 
-Here's a nice diagram provided by Deniz Gunay via Medium that summarizes the concept well: 
+Here's a nice diagram provided by [Deniz Gunay via Medium](https://medium.com/@denizgunay/random-forest-af5bde5d7e1e) that summarizes the concept well: 
 
 !['random forest diagram'](images/rf_diagram.png)
 
