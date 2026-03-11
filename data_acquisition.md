@@ -65,6 +65,14 @@ Since these were the only two datasets I used for this analysis, all the data he
 !['Preview of Utah Kindergarten Immunization Dataset, curated by Sujin'](images/imms_head.png)
 
 ### Data Cleaning
+If you're curious as to how I managed to curate my dataset, I'll explain a bit more here. 
+
+The first and most time-consuming step was to scrape the vaccine exemption data from [text](https://avrpublic.dhhs.utah.gov/imms_dashboard/). I found that several Python packages were required to make this step possible, as I am inexperienced with web scraping. Selenium, BeautifulSoup4, and StringIO were the most integral to the effort. One thing to keep in mind for this data was that the data was available page-by-page, requiring the script to click "Next" about 60 times to get every possible data point. I eventually procured what I called vax_exemptions: 
+
+!['Preview of vax_exemptions, curated by Sujin'](images/vax_exemptionshead.png)
+
+The next step was to get a directory of all schools in Utah, so that I could group schools with different variables. [text](https://schools.utah.gov/schoolsdirectory) allows you to filter schools to your liking and download a .csv file, so that was very helpful. I ended up dropping several variables from this data frame, and then did a pandas inner join to continue with my analysis. 
+
 
 
 ### Variable dictionary
