@@ -8,20 +8,23 @@ Utah is an interesting case study, because despite being very conservative throu
 ## The Process
 
 ### Data Scraping and Collection 
-The data regarding kindergarten immunizations is available via an RShiny app hosted on url. I scraped this data using this. 
-
-I joined this dataset with an elementary school directory available at this url. 
-
-Since these were the only two datasets I used for this analysis, all the data here is free to be shared. 
-
-### Data Cleaning
-If you're curious as to how I managed to curate my dataset, I'll explain a bit more here. 
-
-The first and most time-consuming step was to scrape the vaccine exemption data from [text](https://avrpublic.dhhs.utah.gov/imms_dashboard/). I found that several Python packages were required to make this step possible, as I am inexperienced with web scraping. Selenium, BeautifulSoup4, and StringIO were the most integral to the effort. One thing to keep in mind for this data was that the data was available page-by-page, requiring the script to click "Next" about 60 times to get every possible data point. I eventually procured what I called vax_exemptions: 
+The first and most time-consuming step was to scrape the vaccine exemption data from Utah's [immunization dashboard](https://avrpublic.dhhs.utah.gov/imms_dashboard/). I found that several Python packages were required to make this step possible, as I am inexperienced with web scraping. Selenium, BeautifulSoup4, and StringIO were the most integral to the effort. One thing to keep in mind for this data was that the data was available page-by-page, requiring the script to click "Next" about 60 times to get every possible data point. I eventually procured what I called vax_exemptions: 
 
 !['Preview of vax_exemptions, curated by Sujin'](images/vax_exemptionshead.png)
 
-The next step was to get a directory of all schools in Utah, so that I could group schools with different variables. [text](https://schools.utah.gov/schoolsdirectory) allows you to filter schools to your liking and download a .csv file, so that was very helpful. I ended up dropping several variables from this data frame, and then did a pandas inner join to continue with my analysis. Disappointingly, the two data frames were missing respective schools due to different criteria and data collection methods (e.g. DHHS is not concerned with vaccination rates of online schools), but as someone not very knowledgeable about Utah schools and unable to fully clean the data as needed, I decided to continue with my analysis with a limited joined dataset. 
+The next step was to get a directory of all schools in Utah, so that I could group schools with different variables. [USBE, as mentioned earlier](https://schools.utah.gov/schoolsdirectory) allows you to filter schools to your liking and download a .csv file, so that was very helpful. The variables provided were: 'District/LEA', 'District #', 'School', 'School #', 'Private', 'Charter', 'T-I Prev.', 'T-I Curr.', 'Grades', 'Address', 'City', 'Zip', 'Map', 'Link', 'Stats', 'Phone', 'Fax', 'Chartered By', 'Opened', 'Closed', 'Principal/Director', 'Principal Name', and 'Principal Email'. 
+
+Since these were the only two datasets I used for this analysis, all the data here is fully shareable. 
+
+### Data Cleaning
+
+I'll explain a bit more here on how I curated my dataset. The first step was to join the two datasets for easier analysis and cleaning. 
+
+I ended up dropping several variables from this data frame, mostly from , based on variables I found irrelevant to my question ('T-I Prev.', 'T-I Curr.', 'School #', 'District #', 'Link', 'Stats', 'Phone', 'Fax', 'Chartered By', 'Opened', 'Closed', 'Principal/Director', 'Principal Name', and 'Principal Email')
+
+I then did a pandas inner join to continue with my analysis.
+
+Disappointingly, the two data frames were missing some schools due to different criteria and data collection methods (e.g. DHHS is not concerned with vaccination rates of online schools), as well as outdated school names and differing methods of listing facility names. As someone not very knowledgeable about Utah schools and unable to fully clean the data as needed, I decided to continue with my analysis with a limited joined dataset. 
 
 ### Variable dictionary and dataframe familiarization
 Here is a short preview of the data: 
