@@ -66,3 +66,9 @@ My Levene test revealed that the variances were very different, with a very low 
 ## Conclusions
 
 I conclude that there is a difference in variance of vaccination rates between public and charter/private schools, with public schools having lower variance. As human instinct would tell you, families choosing to attend private or charter schools will come from a more varied distribution than families choosing to attend their default public school. 
+
+## Links and Additional Information 
+
+A link to my code: [text](https://github.com/smleek/data_acquisition_blog)
+
+An article on herd immunity and measles: [text](https://pmc.ncbi.nlm.nih.gov/articles/PMC12581858/)

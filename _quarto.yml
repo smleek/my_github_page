@@ -22,7 +22,6 @@ website:
             href: projects/eda.qmd
           - text: "Data Acquisition"
             href: projects/data-acquisition.qmd
-            href: projects/data-acquisition.html
           - text: "Final Project"
             href: projects/final-project.qmd
           - text: "Tutorial"
