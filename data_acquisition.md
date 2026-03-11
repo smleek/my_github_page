@@ -1,51 +1,3 @@
-BLOG POST
-You will write a blog post that summarizes your project and highlights your dataset. Imagine that you are writing to a “Stat 386 student audience” and your goal is to (1) showcase your work, (2) provide enough detail for someone who would like to do a similar project to get started, and (3) clearly describe and summarize your data.
-
-Your blog post should contain the following (also see the rubric below for more details):
-
-Introduction / motivation of why this project is relevant and interesting.
-
-Motivating question (what are you hoping to learn from this data?).
-
-Information about how you determined that it was ethical / allowable to get the data that you gathered and/or how you implemented good scraping practice.
-
-Summary of the steps needed to get your data with an emphasis on teaching others how they could get started with a similar project.
-
-Overly detailed accounts are not required (and discouraged).
-
-Provide enough info to help someone else potentially get started with a similar project.
-
-Overview of your final dataset, such as:
-
-Total sample size (rows) and number of features (columns)
-
-What each feature represents (a short data dictionary is encouraged)
-
-Brief description of cleaning and transformations you performed to get from raw data to the final dataset
-
-Notable data quality considerations (missingness, duplicates, inconsistent formats, limitations, bias, or coverage gaps)
-
-Links to find further information and/or resources.
-
-A link to your code in a separate GitHub repo.
-
-Also remember the following:
-
-Keep in mind the principles of good blogging (easy to read, images and figures to enhance, relevant and interesting, etc.).
-
-Resist the temptation to write a “log” of everything you did and/or went through to gather your data. Include just enough information so that someone else can learn from what you did and possibly gather similar data.
-
-Length
-Aim for a reading time between 4 to 6 minutes, which corresponds to about 700 to 1100 words.
-This is just a guideline and you will not be graded on the length of your post.
-
-Things to keep in mind
-Easy to skim: Make use of headings, subheadings, bullet points, or numbered lists to make the post readable and easy to skim.
-
-Links: Include links to original sources, further information, or related resources. Links should be live and formatted (do not print the actual URL; instead make linkable text).
-
-Audience: Your audience should be someone who has similar data science training as a student in our class.
-
 # Utah Kindergarten Immunization Data
 
 ## Introduction
@@ -60,9 +12,7 @@ The data regarding kindergarten immunizations is available via an RShiny app hos
 
 I joined this dataset with an elementary school directory available at this url. 
 
-Since these were the only two datasets I used for this analysis, all the data here is free to be shared. Here is a short preview of the data: 
-
-!['Preview of Utah Kindergarten Immunization Dataset, curated by Sujin'](images/imms_head.png)
+Since these were the only two datasets I used for this analysis, all the data here is free to be shared. 
 
 ### Data Cleaning
 If you're curious as to how I managed to curate my dataset, I'll explain a bit more here. 
@@ -71,11 +21,13 @@ The first and most time-consuming step was to scrape the vaccine exemption data 
 
 !['Preview of vax_exemptions, curated by Sujin'](images/vax_exemptionshead.png)
 
-The next step was to get a directory of all schools in Utah, so that I could group schools with different variables. [text](https://schools.utah.gov/schoolsdirectory) allows you to filter schools to your liking and download a .csv file, so that was very helpful. I ended up dropping several variables from this data frame, and then did a pandas inner join to continue with my analysis. 
-
-
+The next step was to get a directory of all schools in Utah, so that I could group schools with different variables. [text](https://schools.utah.gov/schoolsdirectory) allows you to filter schools to your liking and download a .csv file, so that was very helpful. I ended up dropping several variables from this data frame, and then did a pandas inner join to continue with my analysis. Disappointingly, the two data frames were missing respective schools due to different criteria and data collection methods, but as someone not very knowledgeable about Utah schools, I decided to continue with my analysis. 
 
 ### Variable dictionary
+Here is a short preview of the data: 
+
+!['Preview of Utah Kindergarten Immunization Dataset, curated by Sujin'](images/imms_head.png)
+
 School: Facility name. An interesting side-finding from this analysis was that many elementary schools in Utah share the same name. 
 City: the city in which the school is located
 Adequately immunized %: the percentage of students who have completed all required vaccinations, without exceptions. 
@@ -113,4 +65,4 @@ My Levene test revealed that the variances were very different, with a very low 
 
 ## Conclusions
 
-I conclude that there is a difference in variance of vaccination rates between public and charter/private schools, with public schools having lower variance. As human instinct would tell you, 
+I conclude that there is a difference in variance of vaccination rates between public and charter/private schools, with public schools having lower variance. As human instinct would tell you, families choosing to attend private or charter schools will come from a more varied distribution than families choosing to attend their default public school. 

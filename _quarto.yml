@@ -22,12 +22,15 @@ website:
             href: projects/eda.qmd
           - text: "Data Acquisition"
             href: projects/data-acquisition.qmd
+            href: projects/data-acquisition.html
           - text: "Final Project"
             href: projects/final-project.qmd
           - text: "Tutorial"
             href: projects/tutorial.qmd
       - text: "Tutorials"
         href: tutorial.md
+      - text: "Data Acquisition Project"
+        href: data_acquisition.md
     right:
       - icon: github
         href: https://github.com/smleek
@@ -40,6 +43,7 @@ website:
         - projects/index.md
         - projects/eda.qmd
         - projects/data-acquisition.qmd
+        - projects/data-acquisition.html
         - projects/final-project.qmd
         - projects/tutorial.qmd
 
