@@ -45,16 +45,27 @@ Here is a short preview of the final dataset, with 518 rows and 12 columns:
 !['Preview of Utah Kindergarten Immunization Dataset, curated by Sujin'](../images/imms_head.png)
 
 * School: Facility name. An interesting side-finding from this analysis was that many elementary schools in Utah share the same name. 
+
 * City: the city in which the school is located
+
 * Adequately immunized %: the percentage of students who have completed all required vaccinations, without exceptions. 
+
 * Conditionally enrolled %: the percentage of students who are conditionally enrolled, having completed only some of the vaccinations, on the condition that they work to receive their further required vaccinations. 
+
 * Extended conditionally enrolled %: at the end of the conditionally enrolled period, administrators can choose to extend that period for students. 
+
 * Exempt %: The percentage of students who are exempt from completing all required vaccinations, whether for medical or personal reasons. 
+
 * District/LEA: The district which the school belongs to
+
 * Grades: The grade levels that the school serves
+
 * Address: The street address of the school 
+
 * Zip: The zip code for the address of the school 
+
 * Map: the latitude-longitude coordinates for the school. 
+
 * school_type: A column denoting whether the school is private, public, or chartered. 
 
 ### Data Quality
@@ -89,7 +100,9 @@ My Levene test revealed that the variances were very different, with a very low 
 ## Conclusions
 
 I conclude that:
+
 * There is a difference in variance of vaccination rates between public and charter/private schools
+
 * Public schools have lower variance than charter/private schools.  
 
 It seems that as human instinct would tell you, families choosing to attend private or charter schools come from a more varied distribution than families choosing to attend their default public school. 
