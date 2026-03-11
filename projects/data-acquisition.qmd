@@ -15,12 +15,18 @@ Public health experts throughout the country are concerned about the rise in vac
 
 Utah is an interesting case study, because despite being very conservative throughout, Utah tends to rank fairly high for educational attainment among the fifty states. I was curious whether this high level of education would contribute to high vaccine rates, or if conservative patterns would reign. So, using publically available data regarding kindergarten immunizations, I sought to gain a little bit of insight into vaccine rates and hesitancy in Utah. 
 
+This project was motivated by the question, "Do vaccine rates differ significantly between public schools and non-traditional (private, charter) schools in Utah?"
+
 ## The Process
 
 ### Data Scraping and Collection 
 The first and most time-consuming step was to scrape the vaccine exemption data from Utah's [immunization dashboard](https://avrpublic.dhhs.utah.gov/imms_dashboard/). I found that several Python packages were required to make this step possible, as I am inexperienced with web scraping. Selenium, BeautifulSoup4, and StringIO were the most integral to the effort. One thing to keep in mind for this data was that the data was available page-by-page, requiring the script to click "Next" about 60 times to get every possible data point. I eventually procured what I called vax_exemptions: 
 
-!['Preview of vax_exemptions, curated by Sujin'](images/vax_exemptionshead.png)
+Before collecting the data, I verified that the information displayed on the dashboard is publicly available and intended for public reporting. The dashboard does not require authentication and does not contain personally identifiable information, only aggregated school-level statistics.
+
+To follow good scraping practices, my script introduced small delays between page requests so that it did not rapidly query the server. Because the data is publicly reported aggregate statistics, collecting it for educational analysis is consistent with the intended public use of the dashboard.
+
+!['Preview of vax_exemptions, curated by Sujin'](../images/vax_exemptionshead.png)
 
 The next step was to get a directory of all schools in Utah, so that I could group schools with different variables. [USBE, as mentioned earlier](https://schools.utah.gov/schoolsdirectory) allows you to filter schools to your liking and download a .csv file, so that was very helpful. The variables provided were: 'District/LEA', 'District #', 'School', 'School #', 'Private', 'Charter', 'T-I Prev.', 'T-I Curr.', 'Grades', 'Address', 'City', 'Zip', 'Map', 'Link', 'Stats', 'Phone', 'Fax', 'Chartered By', 'Opened', 'Closed', 'Principal/Director', 'Principal Name', and 'Principal Email'. 
 
@@ -33,10 +39,8 @@ I ended up dropping several variables from this data frame, mostly from , based 
 
 I then did a pandas inner join to continue with my analysis.
 
-Disappointingly, the two data frames were missing some schools due to different criteria and data collection methods (e.g. DHHS is not concerned with vaccination rates of online schools), as well as outdated school names and differing methods of listing facility names. As someone not very knowledgeable about Utah schools and unable to fully clean the data as needed, I decided to continue with my analysis with a limited joined dataset. 
-
 ### Variable dictionary
-Here is a short preview of the data: 
+Here is a short preview of the final dataset, with 518 rows and 12 columns: 
 
 !['Preview of Utah Kindergarten Immunization Dataset, curated by Sujin'](../images/imms_head.png)
 
@@ -53,7 +57,14 @@ Zip: The zip code for the address of the school
 Map: the latitude-longitude coordinates for the school. 
 school_type: A column denoting whether the school is private, public, or chartered. 
 
-You'll notice that I left a lot of location-based variables in that were not used; I had hoped to explain data via location clustering, but could not cluster immunization percentages into anything useful. 
+### Data Quality
+
+A few data quality issues were present in the merged dataset:
+
+*Some schools appeared in one dataset but not the other due to differences in reporting criteria (for example, online schools were excluded from the immunization dataset).
+*School names were sometimes formatted differently between sources, which made exact matches difficult.
+
+Because of these inconsistencies, the final dataset likely does not include every school in Utah. However, the remaining observations were sufficient to explore overall vaccination patterns.
 
 ## My Analysis 
 
@@ -69,9 +80,9 @@ I decided to test this hypothesis by first visualizing the data through boxplots
 
 My hypothesis was already looking somewhat correct, so I decided to visualize further with a violin plot, which confirmed my opinions. Violin plots are useful for seeing more clearly the distributions of data. 
 
-!['Violin Plot Comparing Percent Adequately Immunized Between Utah Public Schools and Utah Non-Traditional Private or Charter Schools'](../images/imms_boxplot.png)
+!['Violin Plot Comparing Percent Adequately Immunized Between Utah Public Schools and Utah Non-Traditional Private or Charter Schools'](../images/imms_violinplot.png)
 
-A quick calculation of variances showed that the variance of public schools was equal to approximately 57, while the variance of private or charter schools was equal to approximately 210. This is already quite conclusive, but I decided to test the differences in variance with a measurable Levene test; while a t-test would have done the same thing, this data is not normally distributed and a Levene test is more robust against non-normal distributions. 
+A quick calculation of variances showed that the variance of public schools was equal to approximately 57, while the variance of private or charter schools was equal to approximately 210. This is already quite conclusive, but I decided to test the differences in variance with a measurable Levene test; this data is not normally distributed and a Levene test is more robust against non-normal distributions. 
 
 My Levene test revealed that the variances were very different, with a very low p-value of 4.744105060651353e-06. 
 
