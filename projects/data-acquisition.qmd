@@ -29,14 +29,14 @@ If you're curious as to how I managed to curate my dataset, I'll explain a bit m
 
 The first and most time-consuming step was to scrape the vaccine exemption data from [text](https://avrpublic.dhhs.utah.gov/imms_dashboard/). I found that several Python packages were required to make this step possible, as I am inexperienced with web scraping. Selenium, BeautifulSoup4, and StringIO were the most integral to the effort. One thing to keep in mind for this data was that the data was available page-by-page, requiring the script to click "Next" about 60 times to get every possible data point. I eventually procured what I called vax_exemptions: 
 
-!['Preview of vax_exemptions, curated by Sujin'](images/vax_exemptionshead.png)
+!['Preview of vax_exemptions, curated by Sujin'](../images/vax_exemptionshead.png)
 
 The next step was to get a directory of all schools in Utah, so that I could group schools with different variables. [text](https://schools.utah.gov/schoolsdirectory) allows you to filter schools to your liking and download a .csv file, so that was very helpful. I ended up dropping several variables from this data frame, and then did a pandas inner join to continue with my analysis. Disappointingly, the two data frames were missing respective schools due to different criteria and data collection methods, but as someone not very knowledgeable about Utah schools, I decided to continue with my analysis. 
 
 ### Variable dictionary
 Here is a short preview of the data: 
 
-!['Preview of Utah Kindergarten Immunization Dataset, curated by Sujin'](images/imms_head.png)
+!['Preview of Utah Kindergarten Immunization Dataset, curated by Sujin'](../images/imms_head.png)
 
 School: Facility name. An interesting side-finding from this analysis was that many elementary schools in Utah share the same name. 
 City: the city in which the school is located
@@ -59,15 +59,15 @@ My first takeaway as I scrolled through the .csv file was that only a few school
 
 I formed the hypothesis that perhaps public schools had lower variance in vaccination rates than private and charter schools, and that the outliers seen in this histogram were likely mostly private or charter schools. 
 
-!['Histogram of Overall Adequate Immunization Percentages in Kindergarteners'](images/hist.png)
+!['Histogram of Overall Adequate Immunization Percentages in Kindergarteners'](../images/hist.png)
 
 I decided to test this hypothesis by first visualizing the data through boxplots. 
 
-!['Boxplot Comparing Percent Adequately Immunized Between Utah Public Schools and Utah Non-Traditional Private or Charter Schools'](images/imms_boxplot.png)
+!['Boxplot Comparing Percent Adequately Immunized Between Utah Public Schools and Utah Non-Traditional Private or Charter Schools'](../images/imms_boxplot.png)
 
 My hypothesis was already looking somewhat correct, so I decided to visualize further with a violin plot, which confirmed my opinions. Violin plots are useful for seeing more clearly the distributions of data. 
 
-!['Violin Plot Comparing Percent Adequately Immunized Between Utah Public Schools and Utah Non-Traditional Private or Charter Schools'](images/imms_boxplot.png)
+!['Violin Plot Comparing Percent Adequately Immunized Between Utah Public Schools and Utah Non-Traditional Private or Charter Schools'](../images/imms_boxplot.png)
 
 A quick calculation of variances showed that the variance of public schools was equal to approximately 57, while the variance of private or charter schools was equal to approximately 210. This is already quite conclusive, but I decided to test the differences in variance with a measurable Levene test; while a t-test would have done the same thing, this data is not normally distributed and a Levene test is more robust against non-normal distributions. 
 

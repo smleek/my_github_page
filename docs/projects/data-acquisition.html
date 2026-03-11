@@ -309,7 +309,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The first and most time-consuming step was to scrape the vaccine exemption data from <a href="https://avrpublic.dhhs.utah.gov/imms_dashboard/">text</a>. I found that several Python packages were required to make this step possible, as I am inexperienced with web scraping. Selenium, BeautifulSoup4, and StringIO were the most integral to the effort. One thing to keep in mind for this data was that the data was available page-by-page, requiring the script to click “Next” about 60 times to get every possible data point. I eventually procured what I called vax_exemptions:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/vax_exemptionshead.png" class="img-fluid figure-img"></p>
+<p><img src="../images/vax_exemptionshead.png" class="img-fluid figure-img"></p>
 <figcaption>‘Preview of vax_exemptions, curated by Sujin’</figcaption>
 </figure>
 </div>
@@ -320,7 +320,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Here is a short preview of the data:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/imms_head.png" class="img-fluid figure-img"></p>
+<p><img src="../images/imms_head.png" class="img-fluid figure-img"></p>
 <figcaption>‘Preview of Utah Kindergarten Immunization Dataset, curated by Sujin’</figcaption>
 </figure>
 </div>
@@ -334,21 +334,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>I formed the hypothesis that perhaps public schools had lower variance in vaccination rates than private and charter schools, and that the outliers seen in this histogram were likely mostly private or charter schools.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/hist.png" class="img-fluid figure-img"></p>
+<p><img src="../images/hist.png" class="img-fluid figure-img"></p>
 <figcaption>‘Histogram of Overall Adequate Immunization Percentages in Kindergarteners’</figcaption>
 </figure>
 </div>
 <p>I decided to test this hypothesis by first visualizing the data through boxplots.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/imms_boxplot.png" class="img-fluid figure-img"></p>
+<p><img src="../images/imms_boxplot.png" class="img-fluid figure-img"></p>
 <figcaption>‘Boxplot Comparing Percent Adequately Immunized Between Utah Public Schools and Utah Non-Traditional Private or Charter Schools’</figcaption>
 </figure>
 </div>
 <p>My hypothesis was already looking somewhat correct, so I decided to visualize further with a violin plot, which confirmed my opinions. Violin plots are useful for seeing more clearly the distributions of data.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/imms_boxplot.png" class="img-fluid figure-img"></p>
+<p><img src="../images/imms_boxplot.png" class="img-fluid figure-img"></p>
 <figcaption>‘Violin Plot Comparing Percent Adequately Immunized Between Utah Public Schools and Utah Non-Traditional Private or Charter Schools’</figcaption>
 </figure>
 </div>
@@ -853,14 +853,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>The first and most time-consuming step was to scrape the vaccine exemption data from <span class="co">[</span><span class="ot">text</span><span class="co">](https://avrpublic.dhhs.utah.gov/imms_dashboard/)</span>. I found that several Python packages were required to make this step possible, as I am inexperienced with web scraping. Selenium, BeautifulSoup4, and StringIO were the most integral to the effort. One thing to keep in mind for this data was that the data was available page-by-page, requiring the script to click "Next" about 60 times to get every possible data point. I eventually procured what I called vax_exemptions: </span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="al">!['Preview of vax_exemptions, curated by Sujin'](images/vax_exemptionshead.png)</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="al">!['Preview of vax_exemptions, curated by Sujin'](../images/vax_exemptionshead.png)</span></span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>The next step was to get a directory of all schools in Utah, so that I could group schools with different variables. <span class="co">[</span><span class="ot">text</span><span class="co">](https://schools.utah.gov/schoolsdirectory)</span> allows you to filter schools to your liking and download a .csv file, so that was very helpful. I ended up dropping several variables from this data frame, and then did a pandas inner join to continue with my analysis. Disappointingly, the two data frames were missing respective schools due to different criteria and data collection methods, but as someone not very knowledgeable about Utah schools, I decided to continue with my analysis. </span>
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="fu">### Variable dictionary</span></span>
 <span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>Here is a short preview of the data: </span>
 <span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="al">!['Preview of Utah Kindergarten Immunization Dataset, curated by Sujin'](images/imms_head.png)</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="al">!['Preview of Utah Kindergarten Immunization Dataset, curated by Sujin'](../images/imms_head.png)</span></span>
 <span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>School: Facility name. An interesting side-finding from this analysis was that many elementary schools in Utah share the same name. </span>
 <span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>City: the city in which the school is located</span>
@@ -883,15 +883,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>I formed the hypothesis that perhaps public schools had lower variance in vaccination rates than private and charter schools, and that the outliers seen in this histogram were likely mostly private or charter schools. </span>
 <span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="al">!['Histogram of Overall Adequate Immunization Percentages in Kindergarteners'](images/hist.png)</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="al">!['Histogram of Overall Adequate Immunization Percentages in Kindergarteners'](../images/hist.png)</span></span>
 <span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>I decided to test this hypothesis by first visualizing the data through boxplots. </span>
 <span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="al">!['Boxplot Comparing Percent Adequately Immunized Between Utah Public Schools and Utah Non-Traditional Private or Charter Schools'](images/imms_boxplot.png)</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="al">!['Boxplot Comparing Percent Adequately Immunized Between Utah Public Schools and Utah Non-Traditional Private or Charter Schools'](../images/imms_boxplot.png)</span></span>
 <span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>My hypothesis was already looking somewhat correct, so I decided to visualize further with a violin plot, which confirmed my opinions. Violin plots are useful for seeing more clearly the distributions of data. </span>
 <span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="al">!['Violin Plot Comparing Percent Adequately Immunized Between Utah Public Schools and Utah Non-Traditional Private or Charter Schools'](images/imms_boxplot.png)</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="al">!['Violin Plot Comparing Percent Adequately Immunized Between Utah Public Schools and Utah Non-Traditional Private or Charter Schools'](../images/imms_boxplot.png)</span></span>
 <span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>A quick calculation of variances showed that the variance of public schools was equal to approximately 57, while the variance of private or charter schools was equal to approximately 210. This is already quite conclusive, but I decided to test the differences in variance with a measurable Levene test; while a t-test would have done the same thing, this data is not normally distributed and a Levene test is more robust against non-normal distributions. </span>
 <span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
