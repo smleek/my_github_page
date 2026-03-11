@@ -1,9 +1,9 @@
 # Utah Kindergarten Immunization Data
 
 ## Introduction
-Public health experts throughout the country are concerned about the rise in vaccine hesitancy. The threshold for herd immunity is fairly high at 95%, so after accounting for those who are medically unable to receive vaccinations (infants, immunocompromised, etc), the space for vaccine-averse people in an ideally immune society is really quite limited. 
+Public health experts throughout the country are concerned about the rise in vaccine hesitancy. The threshold for herd immunity against measles (and other simularly infectious diseases) is fairly high at 95%, so after accounting for those who are medically unable to receive vaccinations (infants, immunocompromised, etc), the space for vaccine-averse people in an ideally immune society is really quite limited. 
 
-Utah is an interesting case study, because despite being very conservative throughout, Utah tends to rank fairly high for educational attainment. I was curious whether this high level of education would contribute to high vaccine rates, or if conservative patterns would reign. So, using publically available data regarding kindergarten immunizations, I sought to gain a little bit of insight into vaccine rates. 
+Utah is an interesting case study, because despite being very conservative throughout, Utah tends to rank fairly high for educational attainment among the fifty states. I was curious whether this high level of education would contribute to high vaccine rates, or if conservative patterns would reign. So, using publically available data regarding kindergarten immunizations, I sought to gain a little bit of insight into vaccine rates. 
 
 ## The Process
 
@@ -21,12 +21,14 @@ The first and most time-consuming step was to scrape the vaccine exemption data 
 
 !['Preview of vax_exemptions, curated by Sujin'](images/vax_exemptionshead.png)
 
-The next step was to get a directory of all schools in Utah, so that I could group schools with different variables. [text](https://schools.utah.gov/schoolsdirectory) allows you to filter schools to your liking and download a .csv file, so that was very helpful. I ended up dropping several variables from this data frame, and then did a pandas inner join to continue with my analysis. Disappointingly, the two data frames were missing respective schools due to different criteria and data collection methods, but as someone not very knowledgeable about Utah schools, I decided to continue with my analysis. 
+The next step was to get a directory of all schools in Utah, so that I could group schools with different variables. [text](https://schools.utah.gov/schoolsdirectory) allows you to filter schools to your liking and download a .csv file, so that was very helpful. I ended up dropping several variables from this data frame, and then did a pandas inner join to continue with my analysis. Disappointingly, the two data frames were missing respective schools due to different criteria and data collection methods (e.g. DHHS is not concerned with vaccination rates of online schools), but as someone not very knowledgeable about Utah schools and unable to fully clean the data as needed, I decided to continue with my analysis with a limited joined dataset. 
 
-### Variable dictionary
+### Variable dictionary and dataframe familiarization
 Here is a short preview of the data: 
 
 !['Preview of Utah Kindergarten Immunization Dataset, curated by Sujin'](images/imms_head.png)
+
+My final dataframe had 518 rows (schools) and 13 variables (columns). 
 
 School: Facility name. An interesting side-finding from this analysis was that many elementary schools in Utah share the same name. 
 City: the city in which the school is located
@@ -41,7 +43,7 @@ Zip: The zip code for the address of the school
 Map: the latitude-longitude coordinates for the school. 
 school_type: A column denoting whether the school is private, public, or chartered. 
 
-You'll notice that I left a lot of location-based variables in that were not used; I had hoped to explain data via location clustering, but could not cluster the data into anything useful. 
+You'll notice that I left a lot of location-based variables in that were not used; I had hoped to explain data via location clustering, but could not cluster immunization percentages into anything useful. 
 
 ## My Analysis 
 

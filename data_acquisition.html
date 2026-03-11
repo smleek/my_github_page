@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About Me – Sujin Leek - Data Science Portfolio</title>
+<title>data_acquisition – Sujin Leek - Data Science Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -130,7 +130,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -189,98 +189,109 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
-  <li><a href="#education" id="toc-education" class="nav-link" data-scroll-target="#education">Education</a></li>
-  <li><a href="#skills-interests" id="toc-skills-interests" class="nav-link" data-scroll-target="#skills-interests">Skills &amp; Interests</a>
+  <li><a href="#utah-kindergarten-immunization-data" id="toc-utah-kindergarten-immunization-data" class="nav-link active" data-scroll-target="#utah-kindergarten-immunization-data">Utah Kindergarten Immunization Data</a>
   <ul class="collapse">
-  <li><a href="#technical-skills" id="toc-technical-skills" class="nav-link" data-scroll-target="#technical-skills">Technical Skills</a></li>
-  <li><a href="#areas-of-interest" id="toc-areas-of-interest" class="nav-link" data-scroll-target="#areas-of-interest">Areas of Interest</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#the-process" id="toc-the-process" class="nav-link" data-scroll-target="#the-process">The Process</a>
+  <ul class="collapse">
+  <li><a href="#data-scraping-and-collection" id="toc-data-scraping-and-collection" class="nav-link" data-scroll-target="#data-scraping-and-collection">Data Scraping and Collection</a></li>
+  <li><a href="#data-cleaning" id="toc-data-cleaning" class="nav-link" data-scroll-target="#data-cleaning">Data Cleaning</a></li>
+  <li><a href="#variable-dictionary-and-dataframe-familiarization" id="toc-variable-dictionary-and-dataframe-familiarization" class="nav-link" data-scroll-target="#variable-dictionary-and-dataframe-familiarization">Variable dictionary and dataframe familiarization</a></li>
   </ul></li>
-  <li><a href="#goals" id="toc-goals" class="nav-link" data-scroll-target="#goals">Goals</a></li>
-  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
+  <li><a href="#my-analysis" id="toc-my-analysis" class="nav-link" data-scroll-target="#my-analysis">My Analysis</a></li>
+  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions">Conclusions</a></li>
+  <li><a href="#links-and-additional-information" id="toc-links-and-additional-information" class="nav-link" data-scroll-target="#links-and-additional-information">Links and Additional Information</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">About Me</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7"></h1></header><div class="quarto-title-block"><div class="quarto-title-tools-only"><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background</h2>
-<p>My name is Sujin Leek, and I am a junior studying statistics at Brigham Young University. I really enjoy math and its applications to science and real-world problems, which is how I got into data science. I hope to make a positive impact on the world through my career; I would like to work in research, but am open to diverse opportunities.</p>
-<p>I have internship experience at Lawrence Livermore National Laboratory, where I did statistical work (black-box optimization) for an equation of state project. I am currently working as a research assistant in the statistics department at BYU and will complete an internship at Oak Ridge National Laboratory this summer. Please feel free to contact me with any questions!</p>
+<section id="utah-kindergarten-immunization-data" class="level1">
+<h1>Utah Kindergarten Immunization Data</h1>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Public health experts throughout the country are concerned about the rise in vaccine hesitancy. The threshold for herd immunity against measles (and other simularly infectious diseases) is fairly high at 95%, so after accounting for those who are medically unable to receive vaccinations (infants, immunocompromised, etc), the space for vaccine-averse people in an ideally immune society is really quite limited.</p>
+<p>Utah is an interesting case study, because despite being very conservative throughout, Utah tends to rank fairly high for educational attainment among the fifty states. I was curious whether this high level of education would contribute to high vaccine rates, or if conservative patterns would reign. So, using publically available data regarding kindergarten immunizations, I sought to gain a little bit of insight into vaccine rates.</p>
+</section>
+<section id="the-process" class="level2">
+<h2 class="anchored" data-anchor-id="the-process">The Process</h2>
+<section id="data-scraping-and-collection" class="level3">
+<h3 class="anchored" data-anchor-id="data-scraping-and-collection">Data Scraping and Collection</h3>
+<p>The data regarding kindergarten immunizations is available via an RShiny app hosted on url. I scraped this data using this.</p>
+<p>I joined this dataset with an elementary school directory available at this url.</p>
+<p>Since these were the only two datasets I used for this analysis, all the data here is free to be shared.</p>
+</section>
+<section id="data-cleaning" class="level3">
+<h3 class="anchored" data-anchor-id="data-cleaning">Data Cleaning</h3>
+<p>If you’re curious as to how I managed to curate my dataset, I’ll explain a bit more here.</p>
+<p>The first and most time-consuming step was to scrape the vaccine exemption data from <a href="https://avrpublic.dhhs.utah.gov/imms_dashboard/">text</a>. I found that several Python packages were required to make this step possible, as I am inexperienced with web scraping. Selenium, BeautifulSoup4, and StringIO were the most integral to the effort. One thing to keep in mind for this data was that the data was available page-by-page, requiring the script to click “Next” about 60 times to get every possible data point. I eventually procured what I called vax_exemptions:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="./images/profile.jpeg" class="img-fluid figure-img"></p>
-<figcaption>This is me</figcaption>
+<p><img src="images/vax_exemptionshead.png" class="img-fluid figure-img"></p>
+<figcaption>‘Preview of vax_exemptions, curated by Sujin’</figcaption>
 </figure>
 </div>
+<p>The next step was to get a directory of all schools in Utah, so that I could group schools with different variables. <a href="https://schools.utah.gov/schoolsdirectory">text</a> allows you to filter schools to your liking and download a .csv file, so that was very helpful. I ended up dropping several variables from this data frame, and then did a pandas inner join to continue with my analysis. Disappointingly, the two data frames were missing respective schools due to different criteria and data collection methods (e.g.&nbsp;DHHS is not concerned with vaccination rates of online schools), but as someone not very knowledgeable about Utah schools and unable to fully clean the data as needed, I decided to continue with my analysis with a limited joined dataset.</p>
 </section>
-<section id="education" class="level2">
-<h2 class="anchored" data-anchor-id="education">Education</h2>
-<ul>
-<li><strong>Statistics: Emphasis Statistical Science, Minor Mathematics</strong> - Brigham Young University, April 2027</li>
-<li><strong>Relevant Coursework</strong>: Introduction to Computer Science (Python), Applied R Programming, Probability and Inference I, II, Statistical Modeling I, II (ANOVA, Regression), Linear Algebra (with computational applications in Python), Calculus I, II, III, Data Science Process, Bayesian Statistics</li>
-</ul>
-</section>
-<section id="skills-interests" class="level2">
-<h2 class="anchored" data-anchor-id="skills-interests">Skills &amp; Interests</h2>
-<ul>
-<li>I have experience with Python and R - R for data analysis, and Python for scripting. I have not used Python for data analysis thus far, but am excited to work with Pandas and Numpy in my current courses.</li>
-<li>I grew up speaking Korean as a second language.</li>
-<li>On my mission, I found out that I like teaching! I taught lots of English and Korean while I was serving in South Korea and was able to work as a teaching assistant when I returned to BYU.</li>
-<li>I love reading! I particularly enjoy books on science and public health, but like fiction as well. My favorite books that I’ve read recently are Empire of AI by Karen Hao and Blind Spots by Marty Makary.</li>
-</ul>
-<section id="technical-skills" class="level3">
-<h3 class="anchored" data-anchor-id="technical-skills">Technical Skills</h3>
-<ul>
-<li><strong>Programming</strong>: Python, R</li>
-<li><strong>Data Analysis</strong>: Pandas, NumPy, Tidyverse</li>
-<li><strong>Visualization</strong>: Matplotlib, ggplot</li>
-<li><strong>Tools</strong>: Jupyter Notebooks, Git/GitHub</li>
-</ul>
-</section>
-<section id="areas-of-interest" class="level3">
-<h3 class="anchored" data-anchor-id="areas-of-interest">Areas of Interest</h3>
-<p>I am interested in all areas of science and love math, which is why I ended up in statistics. I enjoy learning new ways to work with data using computers. I did begin university in a public health major, so I am especially interested in epidemiology and statistical applications in biology, as well as social problems.</p>
+<section id="variable-dictionary-and-dataframe-familiarization" class="level3">
+<h3 class="anchored" data-anchor-id="variable-dictionary-and-dataframe-familiarization">Variable dictionary and dataframe familiarization</h3>
+<p>Here is a short preview of the data:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/imms_head.png" class="img-fluid figure-img"></p>
+<figcaption>‘Preview of Utah Kindergarten Immunization Dataset, curated by Sujin’</figcaption>
+</figure>
+</div>
+<p>My final dataframe had 518 rows (schools) and 13 variables (columns).</p>
+<p>School: Facility name. An interesting side-finding from this analysis was that many elementary schools in Utah share the same name. City: the city in which the school is located Adequately immunized %: the percentage of students who have completed all required vaccinations, without exceptions. Conditionally enrolled %: the percentage of students who are conditionally enrolled, having completed only some of the vaccinations, on the condition that they work to receive their further required vaccinations. Extended conditionally enrolled %: at the end of the conditionally enrolled period, administrators can choose to extend that period for students. Exempt %: The percentage of students who are exempt from completing all required vaccinations, whether for medical or personal reasons. District/LEA: The district which the school belongs to Grades: The grade levels that the school serves Address: The street address of the school Zip: The zip code for the address of the school Map: the latitude-longitude coordinates for the school. school_type: A column denoting whether the school is private, public, or chartered.</p>
+<p>You’ll notice that I left a lot of location-based variables in that were not used; I had hoped to explain data via location clustering, but could not cluster immunization percentages into anything useful.</p>
 </section>
 </section>
-<section id="goals" class="level2">
-<h2 class="anchored" data-anchor-id="goals">Goals</h2>
-<p>Right now, my focus is on becoming proficient in theory and tools such that I can answer questions I or others have about the world. I would like to continue doing research and learning new things for the rest of my life, and ideally, my chosen career path will allow me to have a positive impact on the world.</p>
-<p>As I mentioned earlier, I enjoy learning about epidemiology and reading about social problems. Questions like “how can we leverage AI to help solve social problems?” and “are current methods of disease prevention statistically sound and realistically workable?” really appeal to me. I do, however, really enjoy math and proofs, so learning new methods in pure statistics is appealing to me as well.</p>
+<section id="my-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="my-analysis">My Analysis</h2>
+<p>My first takeaway as I scrolled through the .csv file was that only a few schools in Utah are past the 95% threshold. The Department of Health and Human Services reports only 86.9% of kindergartners statewide to be adequately immunized, and most schools follow that trend. However, as I scrolled through the data, I often found that when I saw a school with an alarmingly low or surprisingly high vaccination rate, it was a private or charter school. Examples are the Walden School of Liberal Arts at 49% and Saint Joseph Catholic Elementary School at 100%.</p>
+<p>I formed the hypothesis that perhaps public schools had lower variance in vaccination rates than private and charter schools, and that the outliers seen in this histogram were likely mostly private or charter schools.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/hist.png" class="img-fluid figure-img"></p>
+<figcaption>‘Histogram of Overall Adequate Immunization Percentages in Kindergarteners’</figcaption>
+</figure>
+</div>
+<p>I decided to test this hypothesis by first visualizing the data through boxplots.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/imms_boxplot.png" class="img-fluid figure-img"></p>
+<figcaption>‘Boxplot Comparing Percent Adequately Immunized Between Utah Public Schools and Utah Non-Traditional Private or Charter Schools’</figcaption>
+</figure>
+</div>
+<p>My hypothesis was already looking somewhat correct, so I decided to visualize further with a violin plot, which confirmed my opinions. Violin plots are useful for seeing more clearly the distributions of data.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/imms_boxplot.png" class="img-fluid figure-img"></p>
+<figcaption>‘Violin Plot Comparing Percent Adequately Immunized Between Utah Public Schools and Utah Non-Traditional Private or Charter Schools’</figcaption>
+</figure>
+</div>
+<p>A quick calculation of variances showed that the variance of public schools was equal to approximately 57, while the variance of private or charter schools was equal to approximately 210. This is already quite conclusive, but I decided to test the differences in variance with a measurable Levene test; while a t-test would have done the same thing, this data is not normally distributed and a Levene test is more robust against non-normal distributions.</p>
+<p>My Levene test revealed that the variances were very different, with a very low p-value of 4.744105060651353e-06.</p>
 </section>
-<section id="contact" class="level2">
-<h2 class="anchored" data-anchor-id="contact">Contact</h2>
-<ul>
-<li><strong>Email</strong>: smleek04@gmail.com</li>
-<li><strong>GitHub</strong>: <a href="https://github.com/smleek">github.com/smleek</a></li>
-<li><strong>LinkedIn</strong>: <a href="https://linkedin.com/in/sujinleek">linkedin.com/in/sujinleek</a></li>
-</ul>
-<hr>
-<p><em>This portfolio showcases my learning progress and projects completed during my data science studies.</em></p>
+<section id="conclusions" class="level2">
+<h2 class="anchored" data-anchor-id="conclusions">Conclusions</h2>
+<p>I conclude that there is a difference in variance of vaccination rates between public and charter/private schools, with public schools having lower variance. As human instinct would tell you, families choosing to attend private or charter schools will come from a more varied distribution than families choosing to attend their default public school.</p>
+</section>
+<section id="links-and-additional-information" class="level2">
+<h2 class="anchored" data-anchor-id="links-and-additional-information">Links and Additional Information</h2>
+<p>A link to my code: <a href="https://github.com/smleek/data_acquisition_blog">text</a></p>
+<p>An article on herd immunity and measles: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12581858/">text</a></p>
 
 
 <!-- -->
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -735,58 +746,82 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "About Me"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Utah Kindergarten Immunization Data</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introduction</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Public health experts throughout the country are concerned about the rise in vaccine hesitancy. The threshold for herd immunity against measles (and other simularly infectious diseases) is fairly high at 95%, so after accounting for those who are medically unable to receive vaccinations (infants, immunocompromised, etc), the space for vaccine-averse people in an ideally immune society is really quite limited. </span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Background</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>My name is Sujin Leek, and I am a junior studying statistics at Brigham Young University. I really enjoy math and its applications to science and real-world problems, which is how I got into data science. I hope to make a positive impact on the world through my career; I would like to work in research, but am open to diverse opportunities. </span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>I have internship experience at Lawrence Livermore National Laboratory, where I did statistical work (black-box optimization) for an equation of state project. I am currently working as a research assistant in the statistics department at BYU and will complete an internship at Oak Ridge National Laboratory this summer. Please feel free to contact me with any questions! </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Utah is an interesting case study, because despite being very conservative throughout, Utah tends to rank fairly high for educational attainment among the fifty states. I was curious whether this high level of education would contribute to high vaccine rates, or if conservative patterns would reign. So, using publically available data regarding kindergarten immunizations, I sought to gain a little bit of insight into vaccine rates. </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Process</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">### Data Scraping and Collection </span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>The data regarding kindergarten immunizations is available via an RShiny app hosted on url. I scraped this data using this. </span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="al">![This is me](/images/profile.jpeg)</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>I joined this dataset with an elementary school directory available at this url. </span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## Education</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Statistics: Emphasis Statistical Science, Minor Mathematics** - Brigham Young University, April 2027</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Relevant Coursework**: Introduction to Computer Science (Python), Applied R Programming, Probability and Inference I, II, Statistical Modeling I, II (ANOVA, Regression), Linear Algebra (with computational applications in Python), Calculus I, II, III, Data Science Process, Bayesian Statistics</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Skills &amp; Interests</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>I have experience with Python and R - R for data analysis, and Python for scripting. I have not used Python for data analysis thus far, but am excited to work with Pandas and Numpy in my current courses. </span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>I grew up speaking Korean as a second language. </span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>On my mission, I found out that I like teaching! I taught lots of English and Korean while I was serving in South Korea and was able to work as a teaching assistant when I returned to BYU. </span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>I love reading! I particularly enjoy books on science and public health, but like fiction as well. My favorite books that I've read recently are Empire of AI by Karen Hao and Blind Spots by Marty Makary. </span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="fu">### Technical Skills</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Programming**: Python, R</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Data Analysis**: Pandas, NumPy, Tidyverse</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Visualization**: Matplotlib, ggplot</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tools**: Jupyter Notebooks, Git/GitHub</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="fu">### Areas of Interest</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>I am interested in all areas of science and love math, which is why I ended up in statistics. I enjoy learning new ways to work with data using computers. I did begin university in a public health major, so I am especially interested in epidemiology and statistical applications in biology, as well as social problems. </span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## Goals</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>Right now, my focus is on becoming proficient in theory and tools such that I can answer questions I or others have about the world. I would like to continue doing research and learning new things for the rest of my life, and ideally, my chosen career path will allow me to have a positive impact on the world. </span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>As I mentioned earlier, I enjoy learning about epidemiology and reading about social problems. Questions like "how can we leverage AI to help solve social problems?" and "are current methods of disease prevention statistically sound and realistically workable?" really appeal to me. I do, however, really enjoy math and proofs, so learning new methods in pure statistics is appealing to me as well. </span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="fu">## Contact</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Since these were the only two datasets I used for this analysis, all the data here is free to be shared. </span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">### Data Cleaning</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>If you're curious as to how I managed to curate my dataset, I'll explain a bit more here. </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>The first and most time-consuming step was to scrape the vaccine exemption data from <span class="co">[</span><span class="ot">text</span><span class="co">](https://avrpublic.dhhs.utah.gov/imms_dashboard/)</span>. I found that several Python packages were required to make this step possible, as I am inexperienced with web scraping. Selenium, BeautifulSoup4, and StringIO were the most integral to the effort. One thing to keep in mind for this data was that the data was available page-by-page, requiring the script to click "Next" about 60 times to get every possible data point. I eventually procured what I called vax_exemptions: </span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="al">!['Preview of vax_exemptions, curated by Sujin'](images/vax_exemptionshead.png)</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>The next step was to get a directory of all schools in Utah, so that I could group schools with different variables. <span class="co">[</span><span class="ot">text</span><span class="co">](https://schools.utah.gov/schoolsdirectory)</span> allows you to filter schools to your liking and download a .csv file, so that was very helpful. I ended up dropping several variables from this data frame, and then did a pandas inner join to continue with my analysis. Disappointingly, the two data frames were missing respective schools due to different criteria and data collection methods (e.g. DHHS is not concerned with vaccination rates of online schools), but as someone not very knowledgeable about Utah schools and unable to fully clean the data as needed, I decided to continue with my analysis with a limited joined dataset. </span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="fu">### Variable dictionary and dataframe familiarization</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>Here is a short preview of the data: </span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="al">!['Preview of Utah Kindergarten Immunization Dataset, curated by Sujin'](images/imms_head.png)</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>My final dataframe had 518 rows (schools) and 13 variables (columns). </span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>School: Facility name. An interesting side-finding from this analysis was that many elementary schools in Utah share the same name. </span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>City: the city in which the school is located</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>Adequately immunized %: the percentage of students who have completed all required vaccinations, without exceptions. </span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>Conditionally enrolled %: the percentage of students who are conditionally enrolled, having completed only some of the vaccinations, on the condition that they work to receive their further required vaccinations. </span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>Extended conditionally enrolled %: at the end of the conditionally enrolled period, administrators can choose to extend that period for students. </span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>Exempt %: The percentage of students who are exempt from completing all required vaccinations, whether for medical or personal reasons. </span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>District/LEA: The district which the school belongs to</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>Grades: The grade levels that the school serves</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>Address: The street address of the school </span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>Zip: The zip code for the address of the school </span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>Map: the latitude-longitude coordinates for the school. </span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>school_type: A column denoting whether the school is private, public, or chartered. </span>
 <span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Email**: smleek04@gmail.com</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**GitHub**: <span class="co">[</span><span class="ot">github.com/smleek</span><span class="co">](https://github.com/smleek)</span></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**LinkedIn**: <span class="co">[</span><span class="ot">linkedin.com/in/sujinleek</span><span class="co">](https://linkedin.com/in/sujinleek)</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>You'll notice that I left a lot of location-based variables in that were not used; I had hoped to explain data via location clustering, but could not cluster immunization percentages into anything useful. </span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="fu">## My Analysis </span></span>
 <span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>My first takeaway as I scrolled through the .csv file was that only a few schools in Utah are past the 95% threshold. The Department of Health and Human Services reports only 86.9% of kindergartners statewide to be adequately immunized, and most schools follow that trend. However, as I scrolled through the data, I often found that when I saw a school with an alarmingly low or surprisingly high vaccination rate, it was a private or charter school. Examples are the Walden School of Liberal Arts at 49% and Saint Joseph Catholic Elementary School at 100%. </span>
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>*This portfolio showcases my learning progress and projects completed during my data science studies.*</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>I formed the hypothesis that perhaps public schools had lower variance in vaccination rates than private and charter schools, and that the outliers seen in this histogram were likely mostly private or charter schools. </span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="al">!['Histogram of Overall Adequate Immunization Percentages in Kindergarteners'](images/hist.png)</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>I decided to test this hypothesis by first visualizing the data through boxplots. </span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="al">!['Boxplot Comparing Percent Adequately Immunized Between Utah Public Schools and Utah Non-Traditional Private or Charter Schools'](images/imms_boxplot.png)</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>My hypothesis was already looking somewhat correct, so I decided to visualize further with a violin plot, which confirmed my opinions. Violin plots are useful for seeing more clearly the distributions of data. </span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="al">!['Violin Plot Comparing Percent Adequately Immunized Between Utah Public Schools and Utah Non-Traditional Private or Charter Schools'](images/imms_boxplot.png)</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>A quick calculation of variances showed that the variance of public schools was equal to approximately 57, while the variance of private or charter schools was equal to approximately 210. This is already quite conclusive, but I decided to test the differences in variance with a measurable Levene test; while a t-test would have done the same thing, this data is not normally distributed and a Levene test is more robust against non-normal distributions. </span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>My Levene test revealed that the variances were very different, with a very low p-value of 4.744105060651353e-06. </span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conclusions</span></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>I conclude that there is a difference in variance of vaccination rates between public and charter/private schools, with public schools having lower variance. As human instinct would tell you, families choosing to attend private or charter schools will come from a more varied distribution than families choosing to attend their default public school. </span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="fu">## Links and Additional Information </span></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>A link to my code: <span class="co">[</span><span class="ot">text</span><span class="co">](https://github.com/smleek/data_acquisition_blog)</span></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>An article on herd immunity and measles: <span class="co">[</span><span class="ot">text</span><span class="co">](https://pmc.ncbi.nlm.nih.gov/articles/PMC12581858/)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
