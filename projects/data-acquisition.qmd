@@ -72,9 +72,9 @@ Here is a short preview of the final dataset, with 518 rows and 12 columns:
 
 A few data quality issues were present in the merged dataset:
 
-*Some schools appeared in one dataset but not the other due to differences in reporting criteria (for example, online schools were excluded from the immunization dataset).
+* Some schools appeared in one dataset but not the other due to differences in reporting criteria (for example, online schools were excluded from the immunization dataset).
 
-*School names were sometimes formatted differently between sources, which made exact matches difficult.
+* School names were sometimes formatted differently between sources, which made exact matches difficult.
 
 Because of these inconsistencies, the final dataset likely does not include every school in Utah. However, the remaining observations were sufficient to explore overall vaccination patterns.
 
