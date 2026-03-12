@@ -11,9 +11,9 @@ format:
 # Utah Kindergarten Immunization Data
 
 ## Introduction
-Public health experts throughout the country are concerned about the rise in vaccine hesitancy. The threshold for herd immunity against measles (and other simularly infectious diseases) is fairly high at 95%, so after accounting for those who are medically unable to receive vaccinations (infants, immunocompromised, etc), the space for vaccine-averse people in an ideally immune society is really quite limited. 
+Public health experts throughout the country are concerned about the rise in vaccine hesitancy. The threshold for herd immunity against measles (and other similarly infectious diseases) is fairly high at 95%, so after accounting for those who are medically unable to receive vaccinations (infants, immunocompromised, etc), the space for vaccine-averse people in an ideally immune society is really quite limited. 
 
-Utah is an interesting case study, because despite being very conservative throughout, Utah tends to rank fairly high for educational attainment among the fifty states. I was curious whether this high level of education would contribute to high vaccine rates, or if conservative patterns would reign. So, using publically available data regarding kindergarten immunizations, I sought to gain a little bit of insight into vaccine rates and hesitancy in Utah. 
+Utah is an interesting case study, because despite being very conservative throughout, Utah tends to rank fairly high for educational attainment among the fifty states. I was curious whether this high level of education would contribute to high vaccine rates, or if conservative patterns would reign. So, using publicly available data regarding kindergarten immunizations, I sought to gain a little bit of insight into vaccine rates and hesitancy in Utah. 
 
 This project was motivated by the question, "Do vaccine rates differ significantly between public schools and non-traditional (private, charter) schools in Utah?"
 
@@ -24,7 +24,7 @@ The first and most time-consuming step was to scrape the vaccine exemption data 
 
 Before collecting the data, I verified that the information displayed on the dashboard is publicly available and intended for public reporting. The dashboard does not require authentication and does not contain personally identifiable information, only aggregated school-level statistics.
 
-To follow good scraping practices, my script introduced small delays between page requests so that it did not rapidly query the server. Because the data is publicly reported aggregate statistics, collecting it for educational analysis is consistent with the intended public use of the dashboard.
+To follow good scraping practices, my script introduced small delays between page requests so that it did not rapidly query the server. Because the data is publicly reported aggregate statistics, I assumed that collecting it for educational analysis is consistent with the intended public use of the dashboard.
 
 !['Preview of vax_exemptions, curated by Sujin'](../images/vax_exemptionshead.png)
 
@@ -73,6 +73,7 @@ Here is a short preview of the final dataset, with 518 rows and 12 columns:
 A few data quality issues were present in the merged dataset:
 
 *Some schools appeared in one dataset but not the other due to differences in reporting criteria (for example, online schools were excluded from the immunization dataset).
+
 *School names were sometimes formatted differently between sources, which made exact matches difficult.
 
 Because of these inconsistencies, the final dataset likely does not include every school in Utah. However, the remaining observations were sufficient to explore overall vaccination patterns.
